@@ -1,0 +1,11 @@
+{
+  "name": "consolation",
+  "version": "1.0.0",
+  "description": "Fancy Ouput",
+  "main": "dist/consolation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cameronleslie@gmail.com",
+  "license": "MIT"
+}

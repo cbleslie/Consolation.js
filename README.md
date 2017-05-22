@@ -1,0 +1,2 @@
+# Consolation
+Pretty console logs.
