@@ -1,6 +1,7 @@
 // Checking for node enviroment
 // https://stackoverflow.com/questions/17575790/environment-detection-node-js-or-browser
-const enviromentCheck = new Function("try {return this===global;}catch(e){return false;}");
+const enviromentCheck = new Function("try {console.log('fired');return this===global;}catch(e){console.log('fired');return false;}");
+const enviroment = enviromentCheck();
 
 const makeLog = (enviroment, title, color) => message => {
 
@@ -24,9 +25,9 @@ const makeLog = (enviroment, title, color) => message => {
   }
 }
 
-const error = makeLog(enviromentCheck(),'Error', '#F44336');
-const warning = makeLog(enviromentCheck(),'Warning', '#FFC107');
-const info = makeLog(enviromentCheck(),'Info', '#2196F3');
+const error = makeLog(enviroment,'Error', '#F44336');
+const warning = makeLog(enviroment,'Warning', '#FFC107');
+const info = makeLog(enviroment,'Info', '#2196F3');
 
 export {
   error,
