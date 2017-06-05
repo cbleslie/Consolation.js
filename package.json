@@ -1,11 +1,20 @@
 {
-  "name": "consolation",
+  "name": "fancysauce",
   "version": "1.0.0",
-  "description": "Fancy Ouput",
-  "main": "dist/consolation.js",
+  "description": "Fancy Output",
+  "main": "dist/fancy-sauce.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "author": "cameronleslie@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup": "^0.42.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-watch": "^3.2.2"
+  }
 }
