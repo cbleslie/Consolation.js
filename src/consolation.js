@@ -3,7 +3,7 @@
 const enviromentCheck = new Function("try {return this === global;}catch(e){return false;}");
 const enviroment = enviromentCheck();
 
-const makeLog = (enviroment, title, color) => message => {
+const makeLog = enviroment => (title, color) => message => {
 
   if (enviroment) {
     console.log(`${title}: `, message);
@@ -23,16 +23,17 @@ const makeLog = (enviroment, title, color) => message => {
    line-height: 1.4rem;`);
   }
 }
-
-const error = makeLog(enviroment,'Error', '#F44336');
-const warning = makeLog(enviroment,'Warning', '#FFC107');
-const info = makeLog(enviroment,'Info', '#2196F3');
+const makeLogWithEnviromentSet = makeLog(enviroment);
+const error = makeLogWithEnviromentSet('Error', '#F44336');
+const warning = makeLogWithEnviromentSet('Warning', '#FFC107');
+const info = makeLogWithEnviromentSet('Info', '#2196F3');
 
 export {
   error,
   warning,
   info,
-  makeLog
+  makeLog,
+  makeLogWithEnviromentSet
 };
 
 /*
