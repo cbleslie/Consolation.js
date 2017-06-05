@@ -1,6 +1,6 @@
 {
   "name": "fancysauce",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fancy Output",
   "main": "dist/fancy-sauce.js",
   "scripts": {
