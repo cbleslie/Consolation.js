@@ -1,8 +1,3 @@
-
-/**
- * Checking for node enviroment ttps://stackoverflow.com/questions/17575790/environment-detection-node-js-or-browser
- * @return {boolean}
- */
 const enviromentCheck = new Function("try {return this === global;}catch(e){return false;}");
 const enviroment = enviromentCheck();
 
@@ -42,7 +37,7 @@ export {
 /*
 Example
 -------
-import * as FancySauce from 'consolation.js';
+import * as FancySauce from 'fancy-sauce.js';
 FancySauce.error("This is an error.");
 FancySauce.warning("This is a warning.");
 FancySauce.info("This is informational.");
